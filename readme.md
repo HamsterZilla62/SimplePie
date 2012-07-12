@@ -14,16 +14,21 @@ Installation
 -------------------------------------------------------
 Dézippez et le fichier et mettez le dans le dossier app/Plugin/Simplepie
 Chargez le plugin en éditant le fichier app/Config/bootstrap.php en ajoutant la ligne suivante en fin de fichier
+
 	CakePlugin::load('Simplepie',array('bootstrap'=>true));
 
 Utilisation
 -------------------------------------------------------
 Dans les controllers où vous souhaitez utiliser ce plugin ajoutez la ligne ci-dessous au début de votre Controller
+
 	public $components = array('Simplepie.Simplepie');
 
 puis dans votre controller :
+
 	$d['flux'] = $this->Simplepie->feed('URL_DU_FLUX_RSS'); 
+	
 	$this->set($d);
 	
 Dans la vue :
+
 	debug($flux);
