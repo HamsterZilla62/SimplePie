@@ -12,11 +12,11 @@ App::uses('File', 'Utility');
 class SimplepieComponent extends Component {
   private $cache;
 
-  function __construct() {
+  public function __construct() {
     $this->cache = CACHE . 'rss' . DS;
   }
 
-  function feed($feed_url, $options=array()) {
+  public function feed($feed_url, $options=array()) {
 		$options = array_merge(array('start' => 0, 'length' => 10, 'cache' => true, 'fields' => array('title', 'permalink')), $options);
 		
 		if($options['cache']) {
