@@ -57,11 +57,7 @@ class SimplepieComponent extends Component {
 		}
 
     //return
-    if ($items) {
-      return $items;
-    } else {
-      return false;
-    }
+    return ($items) ? $items : false;
   }
 }
 ?>
